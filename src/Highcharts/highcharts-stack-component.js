@@ -17,7 +17,7 @@ class HighchartsDemo extends Component {
             text: abbreviateNumber(5915),
             align: 'right',
             verticalAlign: 'middle',
-            style: { color: 'white', fontSize: '60px', fontWeight: 900, fontFamily: '"Lato", sans-serif;', opacity: 1, transition: 'opacity 1s ease-in-out' },
+            style: { color: 'white', fontSize: '60px', fontWeight: 900, fontFamily: '"Lato", sans-serif;' },
             y: 20
         },
         xAxis: {

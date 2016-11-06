@@ -3,8 +3,8 @@ import ReactHighcharts from 'react-highcharts';
 import abbreviateNumber from '../utility/abbreviate-number-utility'
 
 class HighchartsDonut extends Component {
-  render() {
 
+  render() {
     const title = ['New', 'Job requested', 'In progress', 'Closed'];
     const data = [
       [
@@ -83,7 +83,7 @@ class HighchartsDonut extends Component {
             //valueSuffix: '%'
             formatter: function(){
                 if (this.point.name === 'Slice') {
-                    //return null; // suppress the tooltips if it has no name
+                    return false; // suppress the tooltips if it has no name
                 } else {
                     return this.series.name + ': <b>' + this.point.y + '  :  ' + Math.round(this.point.percentage) +'%</b>';
                 }
@@ -111,7 +111,7 @@ class HighchartsDonut extends Component {
     }
 
     return (
-      <div style={ { textAlign: 'center', marginTop: '50px' } }>
+      <div id="donuts" style={ { textAlign: 'center', marginTop: '50px' } }>
         <div style={ { display: 'inline-block' } }>
           <ReactHighcharts config={getConfig(title[0], data[0])} neverReflow={true}></ReactHighcharts>
         </div>
