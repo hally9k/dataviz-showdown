@@ -67,8 +67,8 @@ class HighchartsDonut extends Component {
           chart: {
               type: 'pie',
               backgroundColor: '#282C34',
-              width: 250,
-              height: 250
+              width: 265,
+              height: 265
           },
           yAxis: {
               title: {
@@ -111,7 +111,7 @@ class HighchartsDonut extends Component {
     }
 
     return (
-      <div style={ {marginTop: '50px' } }>
+      <div style={ { textAlign: 'center', marginTop: '50px' } }>
         <div style={ { display: 'inline-block' } }>
           <ReactHighcharts config={getConfig(title[0], data[0])} neverReflow={true}></ReactHighcharts>
         </div>
