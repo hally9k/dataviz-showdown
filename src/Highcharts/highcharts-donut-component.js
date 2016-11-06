@@ -15,7 +15,7 @@ class HighchartsDonut extends Component {
         },
         chart: {
             type: 'pie',
-            backgroundColor: 'black'
+            backgroundColor: 'rgb(28, 32, 34)'
         },
         yAxis: {
             title: {

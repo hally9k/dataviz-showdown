@@ -8,11 +8,10 @@ class HighchartsDemo extends Component {
       credits: false,
         chart: {
             type: 'bar',
-            backgroundColor: 'black',
-            height: 200
+            backgroundColor: 'rgb(28, 32, 34)'
         },
         title: {
-            text: '',
+            text: '3.9k',
             style: { color: 'white' }
         },
         xAxis: {
@@ -45,22 +44,26 @@ class HighchartsDemo extends Component {
             series: {
                 stacking: 'normal',
                 borderWidth: 10,
-                borderColor: 'black',
+                borderColor: 'rgb(28, 32, 34)',
                 borderRadius: 20
             }
         },
         series: [{
             name: 'New',
-            data: [127]
+            data: [127],
+            color: '#6A747D'
         }, {
             name: 'Job requested',
-            data: [58]
+            data: [58],
+            color: '#A0BE20'
         }, {
             name: 'In progress',
-            data: [768]
+            data: [768],
+            color: '#F4A423'
         }, {
             name: 'Closed',
-            data: [467]
+            data: [467],
+            color: '#0DA4DC'
         }]
     };
 
