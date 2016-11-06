@@ -74,7 +74,8 @@ class HighchartsDemo extends Component {
     };
 
     return (
-      <div style={ { marginLeft: '100px', marginRight: '100px', marginTop: '50px' } }>
+      <div style={ { margin: '100px', marginTop: '50px' } }>
+        <h2 style={{color: 'white', textAlign: 'left', margin: 0, marginLeft: '0px'}}>Total active alerts</h2>
         <ReactHighcharts config={this.stackConfig} neverReflow={true}></ReactHighcharts>
       </div>
     );

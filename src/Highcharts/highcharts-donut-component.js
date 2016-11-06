@@ -64,11 +64,18 @@ class HighchartsDonut extends Component {
             style: { color: 'white', fontSize: '40px', fontWeight: 900, fontFamily: '"Lato", sans-serif;' },
             y: 15
           },
+          subtitle: {
+            text: data[0].name,
+            verticalAlign: 'bottom',
+            align: 'center',
+            style: { color: 'silver', fontSize: '20px', fontWeight: 600, fontFamily: '"Lato", sans-serif;' },
+            y: -15
+          },
           chart: {
               type: 'pie',
               backgroundColor: '#282C34',
               width: 265,
-              height: 265
+              height: 320
           },
           yAxis: {
               title: {
@@ -80,13 +87,11 @@ class HighchartsDonut extends Component {
             }
           },
           tooltip: {
-            //valueSuffix: '%'
             formatter: function(){
-                if (this.point.name === 'Slice') {
-                    return false; // suppress the tooltips if it has no name
-                } else {
+                if (this.point.name !== 'Slice') {
                     return this.series.name + ': <b>' + this.point.y + '  :  ' + Math.round(this.point.percentage) +'%</b>';
                 }
+                return false;
             }
           },
           plotOptions: {
@@ -112,6 +117,7 @@ class HighchartsDonut extends Component {
 
     return (
       <div id="donuts" style={ { textAlign: 'center', marginTop: '50px' } }>
+        <h2 style={{color: 'white', textAlign: 'left', margin: 0, marginLeft: '40px'}}>Active alert breakdowns</h2>
         <div style={ { display: 'inline-block' } }>
           <ReactHighcharts config={getConfig(title[0], data[0])} neverReflow={true}></ReactHighcharts>
         </div>
