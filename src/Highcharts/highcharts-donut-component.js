@@ -16,7 +16,7 @@ class HighchartsDonut extends Component {
         {
             name: null,
             y: 4559,
-            enableMouseTracking: false
+            color: '#5b5b5b'
         }
       ],
       [
@@ -27,7 +27,8 @@ class HighchartsDonut extends Component {
         },
         {
             name: null,
-            y: 2468
+            y: 2468,
+            color: '#5b5b5b'
         }
       ],
       [
@@ -38,7 +39,8 @@ class HighchartsDonut extends Component {
         },
         {
             name: null,
-            y: 2791
+            y: 2791,
+            color: '#5b5b5b'
         }
       ],
       [
@@ -49,7 +51,8 @@ class HighchartsDonut extends Component {
         },
         {
             name: null,
-            y: 4427
+            y: 4427,
+            color: '#5b5b5b'
         }
       ],
     ];
