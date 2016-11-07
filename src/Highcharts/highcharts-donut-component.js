@@ -16,7 +16,12 @@ class HighchartsDonut extends Component {
         {
             name: null,
             y: 4559,
-            color: '#5b5b5b'
+            color: '#5b5b5b',
+            events: {
+              mouseOver: (event) => {
+                event.preventDefault();
+              }
+            }
         }
       ],
       [
